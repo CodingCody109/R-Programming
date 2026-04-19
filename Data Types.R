@@ -80,3 +80,17 @@ tab <- data.frame(foo = 1:4, bar = c(T, T, F, F))
 tab
 nrow(tab)
 ncol(tab)
+
+# Describe the objects: the Names attribute
+x <- 1:3
+names(x)
+
+names(x) <- c("foo", "bar", "norf")
+names(x)
+
+x <- list(a = 1, b = 2, c = 3)
+x
+
+m <- matrix(1:4, nrow = 2, ncol = 2)
+dimnames(m) <- list(c("a", "b"), c("c", "d"))
+m
