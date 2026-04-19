@@ -52,3 +52,31 @@ vec <- 1:10
 vec
 dim(vec) <- c(2,5)
 vec
+
+#Create matrix from two vectors: cbind() and rbind()
+x <- 1:3
+y <- 10:12
+cbind(x,y)
+rbind(x,y)
+
+# Factors: storing categorical varibles
+fac <- factor(c("yes", "yes", "no", "yes", "no"))
+fac
+table(fac)
+unclass(fac) #bring down to an integer vector
+
+# set up the baseline level
+fac1 <- factor(c("yes", "yes", "no", "yes", "no"), levels = c("yes", "no"))
+fac1
+
+# Test for missing values
+is.na()
+is.nan()
+# NA values have a class, and NaN is also NA but the converse is not true
+
+# Data Frames: storing tabular data
+# Each element in a data frame is a column, the length of each element is the row number
+tab <- data.frame(foo = 1:4, bar = c(T, T, F, F))
+tab
+nrow(tab)
+ncol(tab)
